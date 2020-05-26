@@ -48,7 +48,7 @@ public class CustomerControllerImpl implements CustomerController {
         Customer customer = customerRepository.find(id);
 
         if (customer == null) {
-            throw new NotFoundResponse(String.format("A post with id '%s' is not found", id));
+            throw new NotFoundResponse(String.format("A customer with id '%s' is not found", id));
         }
 
         context.json(customer);
